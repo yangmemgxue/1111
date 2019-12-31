@@ -1,0 +1,44 @@
+/* pages/category/category.wxss */
+
+.nav{
+   white-space: nowrap;
+}
+.boxitem{
+  height: 40px;
+  margin-bottom:20rpx;
+  white-space: nowrap; /*水平滑动scroll-view条件之一*/
+}
+.p_name {
+  margin: 15rpx 10rpx 0 10rpx;
+  color: #C3C3C3;
+}
+.nav_item_active{
+  border-bottom: 1px solid #0091A5;
+  /* margin: 0 15rpx; */
+}
+.nav_item_active .p_name{
+  color: black;
+}
+
+
+.swiper-item image{
+  width:100%;
+  height: 410rpx;
+}
+
+.categories_name {
+    color: black;
+    font-size: 18px;
+    text-indent: 0.8em;
+}
+.categories_body {
+    color: #6d6060;
+    font-size: 12px;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    align-content: center;
+    text-indent: 0.8em;
+}

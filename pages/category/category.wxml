@@ -1,0 +1,24 @@
+<!--pages/category/category.wxml-->
+<view style="position:fixed;width:100%;background:#fff;z-index:99;  border-bottom:1px solid #C3C3C3;" >
+  <scroll-view class="nav" scroll-x="true"  bindscroll="scroll">
+    <view class="boxitem" style="width:900rpx;display:flex;">
+      <block  wx:for="{{categories}}" wx:key="index" ><!-- block里面不能写点击 -->
+        <view class="scroll-body" bindtap="change" data-slug="{{item.slug}}" data-index="{{index}}" class="{{index==currentIndex? 'nav_item_active':''}}">
+          <view class="p_name">{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<!--  -->
+<view class="page-section page-section-spacing swiper" >
+  <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange" current="{{currentIndex}}" style="height: {{bodyHeight}}; padding-top:34px">
+      <swiper-item wx:for="{{categories}}" wx:key="id">
+        <view class="swiper-item" wx:for="{{courses}}" wx:for-item="item_b" style="height: 700rpx" wx:key="item_b">
+          <image src="{{item_b.photo}}" data-id="{{item_b.id}}" bindtap="toCourse" ></image>
+          <view class="categories_name">{{item_b.name}}</view>
+          <view class="categories_body">{{item_b.body}}</view>
+        </view>
+      </swiper-item>
+  </swiper>  
+</view>

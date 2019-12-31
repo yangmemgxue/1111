@@ -1,0 +1,11 @@
+<!--pages/calendar/calendar.wxml-->
+<view class="date">
+  <text>课程日历</text>
+  <view wx:for="{{courses}}" wx:key="index">
+    <view data-id="{{item.id}}" bindtap="toCourses" class="date">
+      <view class="time">{{item.created_at}}</view>
+      <image src="{{item.photo}}"></image>
+      <view class="name">{{item.name}}</view>
+    </view>
+  </view>
+</view>

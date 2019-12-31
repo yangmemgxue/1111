@@ -1,0 +1,13 @@
+<!--pages/search/search.wxml-->
+<view>
+  <view class="search_box">
+    <view class="search">
+      <image src="/image/sarch.jpg"></image>
+      <input  type="text" confirm-type="search"  bindconfirm="search" ></input>
+    </view>
+  </view>
+  <text class="content">热门搜索内容</text>
+  <view class="hot">
+  <text class="hot_item" wx:for="{{search}}" data-keyWord="{{item}}" bindtap="search_hot">{{item}}</text>
+  </view>
+</view>

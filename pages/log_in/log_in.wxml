@@ -1,0 +1,73 @@
+<!--pages/log_in/log_in.wxml-->
+<view>
+  <!-- 页头 -->
+  <view class="header">
+    <image src="/image/arrow_down.png" class="icon"></image>
+    <view class="changes">
+      <view class="change {{index==currentIndex?'active':''}}" wx:for="{{buttonData}}" wx:key="index" data-index="{{index}}" bindtap="change">
+        {{item}}
+      </view>
+    </view>
+    <view class="f_page" bindtap="toText">首页</view>
+  </view>
+  <!-- 登录 -->
+  <view class="log_in" wx:if="{{currentIndex==0}}">
+    <form bindsubmit="formSubmit">
+      <view class="log">
+        <text class=" title l_title">电子邮箱</text>
+        <input name="email" class="input email" type="email" placeholder="电子邮箱"></input>
+      </view>
+      <view class="log">
+        <text class=" title l_title">密码</text>
+        <input name="password" class=" input weui-input" type="password" placeholder="密码" />
+      </view>
+      <button formType="submit" class="i_log">登录</button>
+    </form>
+  </view>
+  <!-- 会员注册 -->
+  <view class="member" wx:else>
+    <form bindsubmit="register">
+      <!-- 姓名 -->
+      <view class="name">
+        <view class="m_name">
+          <text>姓</text>
+          <input class="n_input i_x_name" placeholder="姓"></input>
+          <view class="point">*请实名登记你的信息</view>
+        </view>
+        <view class="m_name">
+          <text>名</text>
+          <input class="n_input i_x_name" placeholder="名"></input>
+        </view>
+      </view>
+      <!-- 电子邮箱 -->
+      <view class="m_email">
+        <text class=" title m_title">电子邮箱</text>
+        <input name="email" class=" input i_email" placeholder="电子邮箱"></input>
+        <text class="error">{{error_email}}</text>
+      </view>
+      <!-- 密码 -->
+      <view class="m_secret">
+        <view class="m_password">
+          <text class=" title m_title">密码</text>
+          <view class="point">*半角英文数字6位数以上</view>
+        </view>
+        <input name="password" class="input weui-input" password type="text" placeholder="密码" />
+        <text class="error">{{error_password}}</text>
+      </view>
+      <!-- 性别 -->
+      <view class="sex">
+        <text>性别：</text>
+        <radio-group class="sex_r">
+          <view wx:for="{{radioData}}" wx:key="index" class="sex_v">
+            <label for="{{item.name}}" class="sex_l">
+              <text class="label">{{item.name}}</text>
+            </label>
+            <radio value="{{item.name}}" checked="{{item.checked}}" />
+          </view>
+        </radio-group>
+      </view>
+      <button size="600rpx" class="but" formType="submit">注册</button>
+    </form>
+  </view>
+
+</view>

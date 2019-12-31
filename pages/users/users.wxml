@@ -1,0 +1,6 @@
+<!--pages/users/users.wxml-->
+<!-- 登录 -->
+<view class="log">
+  <button class="log_in" bindtap="click">登录</button>
+  <view class="text">您必须登陆之后才能访问</view>
+</view>

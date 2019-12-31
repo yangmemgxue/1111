@@ -1,0 +1,27 @@
+/* pages/calendar/calendar.wxss */
+
+.date text {
+  font-size: 48rpx;
+  color: #0091a5;
+  margin: 70rpx 30rpx;
+}
+
+.date {
+  margin: 50rpx 20rpx;
+}
+
+.time {
+  color: #ccc;
+  margin: 20rpx 0;
+  font-size: 40rpx;
+}
+
+.date image {
+  height: 340rpx;
+  border-radius: 18rpx;
+}
+
+.name {
+  margin: 37Frpx 0;
+  font-size: 35rpx;
+}

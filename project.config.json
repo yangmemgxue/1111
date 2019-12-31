@@ -1,0 +1,159 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.4",
+	"appid": "wxb0641d804868d5b7",
+	"projectname": "text2",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/text/text",
+					"pathName": "pages/text/text",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/category/category",
+					"pathName": "pages/category/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/courses/courses",
+					"pathName": "pages/courses/courses",
+					"query": "id=28",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/users/users",
+					"pathName": "pages/users/users",
+					"query": "id=28",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/log_in/log_in",
+					"pathName": "pages/log_in/log_in",
+					"query": "id=28",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/news",
+					"pathName": "pages/news/news",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/searched/searched",
+					"pathName": "pages/searched/searched",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/calendar/calendar",
+					"pathName": "pages/calendar/calendar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/on_news/on_news",
+					"pathName": "pages/on_news/on_news",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/news/news",
+					"pathName": "pages/news/news",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "pages/charpters/charpters",
+					"pathName": "pages/charpters/charpters",
+					"query": "id=270",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/courses/courses",
+					"pathName": "pages/courses/courses",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

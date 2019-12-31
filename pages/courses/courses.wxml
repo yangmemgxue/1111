@@ -1,0 +1,78 @@
+<!--pages/courses/courses.wxml-->
+
+<view>
+  <!-- 头部 -->
+  <view class="header {{scrollTop>440 ? 'rel' : 'nav'}}" style="position:fixed;width:100%;background:#fff;z-index:99;">
+    <view class='section-header'>{{courses.name}}</view>
+  </view>
+  <!-- 内容 -->
+  <view class="container">
+    <!-- 课程介绍 -->
+    <image src="{{courses.photo}}" style="width:100%;height:410rpx;"></image>
+    <view class="desiption">
+      <view class="total">
+        全{{chapters.length}}回
+      </view>
+      <view class="title">
+        {{courses.name}}
+      </view>
+      <view class="body {{isShow?'show':'hidden'}}">
+        <view wx:if="{{courses.body==null}}">暂无内容</view>
+        <view class="body" wx:else>{{courses.body}}</view>
+      </view>
+      <view wx:if="{{courses.body!==null}}" class="arrow_icon">
+        <view>
+          <image src="/image/arrow_down.png" class="arrow_down {{isShow?'':'arrow_up'}}" bindtap="expand"></image>
+        </view>
+
+      </view>
+    </view>
+    <!-- 章节介绍 -->
+    <view class="content">
+      <view class="content_c" wx:for="{{chapters}}" wx:key="index" data-id="{{item.id}}" bindtap="toDetails">
+        <view class="c_charpter" >
+          <view class="c_icon">
+            <image src="/image/arrow_right.png" style="width:100%;height:100%"></image>
+          </view>
+          <view class="c_num">{{index+1}}</view>
+          <view class="c_tage">
+            <view class="c_title">{{item.title}}</view>
+            <view class="c_bot">
+              <view class="free" bindtap="freeChange">
+                <view class="free_text">{{item.free?'免费':'未发布'}}</view>
+              </view>
+              <view class="created_at">{{item.created_at}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="border"></view>
+      </view>
+      <!-- 老师 -->
+      <view class="teacher">
+        <view class="t_photo">
+          <image src="{{teacher.avatar}}" class="t_img"></image>
+        </view>
+        <view class="t_mes ">
+          <view class="fullname">{{teacher.fullname}}</view>
+          <view class="company">{{teacher.company}}</view>
+        </view>
+      </view>
+      <!-- 相关课程 -->
+      <view class="related_courses">
+        <view class="r_title">相关课程</view>
+        <view class="r_scroll">
+          <scroll-view scroll-x="true" bindscroll="scroll">
+            <view style="display:flex">
+              <view wx:for="{{relation_courses}}" wx:key="index">
+                <view class="r_list">
+                  <image src="{{item.photo}}" class="r_img"></image>
+                  <view class="l_title_text">{{item.title}}</view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,113 @@
+<!--pages/text/text.wxml-->
+<view>
+  <!-- 头部 -->
+  <view class="header">
+    <view class="hd-top">
+      <view class="shadow">
+        <image src="/image/news.jpg" bindtap="toNews" ></image>
+        <view class="shadow_r">
+          <image src="/image/sarch.jpg" bindtap="toSearch" ></image>
+          <image src="/image/dots.jpg"></image>
+        </view>
+      </view>
+    </view>
+    <view class="header-text">
+      <text class="find">发现</text>
+      <text class="recommend">推荐</text>
+    </view>
+  </view>
+
+  <view class="container">
+    <!-- 轮播图 -->
+    <view class="">
+      <view class="page-body">
+        <view class="page-section page-section-spacing swiper">
+          <swiper style="height:300px" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange">
+            <block wx:for="{{slide_courses}}" wx:for-item="item">
+              <swiper-item>
+                <view class="swiper-item {{item}}">
+                  <view>
+                    <image src="{{item.photo}}" class="photo"></image>
+                  </view>
+                  <view class="contant">
+                    <text class="created_at">{{item.created_at}}</text>
+                    <text class="name">{{item.name}}</text>
+                    <text class="updated_at">{{item.updated_at}}</text>
+                  </view>
+                </view>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+      </view>
+      <view class="dots">
+        <block wx:for="{{imgUrls}}" wx:key="unique">
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+        </block>
+      </view>
+    </view>
+
+    <view class="line"></view>
+
+    <!-- 课程发布日历 -->
+    <view class="new_courses">
+      <view class="new_courses-name">
+        <text>课程发布日历</text>
+      </view>
+      <scroll-view class="class_date-spacing_h" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view class="new_courses-desc">
+          <view id="demo1" wx:for="{{new_courses}}" wx:for-item="item" class="new_courses-desc_c">
+            <view class="new_courses-desc_ctop">
+              <image src="{{item.photo}}" class="photo"></image>
+            </view>
+            <view class="new_courses-desc_cbot">
+              <text class="created_at">{{item.name}}</text>
+              <text class="updated_at">{{item.created_at}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 最受欢迎的课程 -->
+    <view class="likes_courses">
+      <view class="likes_courses-name">
+        <text>最受欢迎的课程</text>
+      </view>
+      <scroll-view class="class_date-spacing_h" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view class="likes_courses-desc">
+          <view id="demo1" wx:for="{{likes_courses}}" wx:for-item="item" class="likes_courses-desc_c">
+            <view class="new_courses-desc_ctop">
+              <image src="{{item.photo}}" class="photo"></image>
+            </view>
+            <view class="likes_courses-desc_cbot">
+              <text class="created_at">{{item.name}}</text>
+              <text class="updated_at">{{item.created_at}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+    <!-- 入门/推荐课程 -->
+    <view class="recommended_courses">
+      <view class="recommended_courses-name">
+        <text>入门/推荐课程</text>
+      </view>
+      <scroll-view class="class_date-spacing_h" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view class="recommended_courses-desc">
+          <view id="demo1" wx:for="{{recommended_courses}}" wx:for-item="item" class="recommended_courses-desc_c">
+            <view class="recommended_courses-desc_ctop">
+              <image src="{{item.photo}}" class="photo"></image>
+            </view>
+            <view class="recommended_courses-desc_cbot">
+              <text class="created_at">{{item.name}}</text>
+              <text class="updated_at">{{item.created_at}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+
+  </view>
+</view>

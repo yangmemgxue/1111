@@ -1,0 +1,2 @@
+<!--pages/on_news/on_news.wxml-->
+<web-view src="{{src}}"></web-view>

@@ -1,0 +1,205 @@
+/* pages/text/text.wxss */
+
+.container {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* nav */
+
+.hd-top {
+  height: 40px;
+  background-color:#F9F9F9;
+}
+
+.hd-top image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.shadow {
+  padding: 20rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shadow_r image {
+  margin: 0 10rpx;
+}
+
+/* 课程 */
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 0 8px;
+}
+
+.find {
+  color: rgb(52, 184, 162);
+  font-size: 22px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.recommend {
+  font-size: 16px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: 160px;
+  border-radius: 10rpx;
+}
+
+.contant {
+  display: flex;
+  flex-direction: column;
+}
+
+.created_at {
+  font-size: 16px;
+  margin: 8px 0;
+  color: green;
+}
+
+.name {
+  font-size: 20px;
+}
+
+.updated_at {
+  font-size: 14px;
+}
+
+/* 点点 */
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.dots .dot {
+  margin: 0 8rpx;
+  width: 15rpx;
+  height: 15rpx;
+  background: gray;
+  border-radius: 8rpx;
+  transition: all 0.6s;
+}
+
+.dots .dot.active {
+  width: 24rpx;
+  background: orchid;
+}
+
+.line {
+  border: 1rpx solid #ddd;
+  margin: 3px 10px;
+}
+
+/* 课程发布日历 */
+
+.new_courses {
+  height: 300rpx;
+  margin: 50rpx 0 200rpx 0;
+}
+
+.new_courses-name {
+  font-size: 21px;
+  font-weight: bolder;
+  margin: 15rpx;
+}
+
+.new_courses-desc {
+  width: 6000rpx;
+  /* height: 200px; */
+  display: flex;
+}
+
+.new_courses-desc_c {
+  margin: 0 5rpx;
+}
+
+.scroll_photo {
+  width: 300px;
+  height: 120px;
+}
+
+.new_courses-desc_cbot {
+  display: flex;
+  flex-direction: column;
+  width: 500rpx;
+}
+
+/*最受欢迎的课程  */
+
+.likes_courses {
+  height: 300rpx;
+  margin-top: 300rpx;
+}
+
+.likes_courses-name {
+  font-size: 21px;
+  font-weight: bolder;
+  margin: 15rpx;
+}
+
+.likes_courses-desc {
+  width: 6000rpx;
+  /* height: 200px; */
+  display: flex;
+}
+
+.likes_courses-desc_c {
+  margin: 0 5rpx;
+}
+
+.scroll_photo {
+  width: 300px;
+  height: 120px;
+}
+
+.likes_courses-desc_cbot {
+  display: flex;
+  flex-direction: column;
+  width: 500rpx;
+}
+
+/*入门/推荐课程  */
+
+.recommended_courses {
+  height: 300rpx;
+  margin-top: 300rpx;
+}
+
+.recommended_courses-name {
+  font-size: 21px;
+  font-weight: bolder;
+  margin: 15rpx;
+}
+
+.recommended_courses-desc {
+  width: 3000rpx;
+  /* height: 200px; */
+  display: flex;
+}
+
+.recommended_courses-desc_c {
+  margin: 0 5rpx;
+}
+
+.scroll_photo {
+  width: 300px;
+  height: 120px;
+}
+
+.recommended_courses-desc_cbot {
+  display: flex;
+  flex-direction: column;
+  width: 500rpx;
+}

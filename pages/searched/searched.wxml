@@ -1,0 +1,13 @@
+<!--pages/searched/searched.wxml-->
+
+<view wx:if="{{courses.length>0}}">
+  <view class="page-section page-section-spacing swiper">
+    <view class="swiper-item" wx:for="{{courses}}" style="height: 700rpx" wx:key="item_b">
+      <image src="{{item.photo}}" style="width:100%;height:410rpx" data-id="{{item.id}}" bindtap="toCourse"></image>
+      <view class="categories_name">{{item.name}}</view>
+      <view class="categories_body">{{item.body}}</view>
+    </view>
+  </view>
+</view>
+
+<view wx:else>暂无课程</view>

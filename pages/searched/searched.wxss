@@ -1,0 +1,17 @@
+/* pages/searched/searched.wxss */
+.categories_name {
+    color: black;
+    font-size: 18px;
+    text-indent: 0.8em;
+}
+.categories_body {
+    color: #6d6060;
+    font-size: 12px;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    align-content: center;
+    text-indent: 0.8em;
+}

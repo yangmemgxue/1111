@@ -1,0 +1,109 @@
+/* pages/mine/mine.wxss */
+
+/*nav */
+
+.nav {
+  height: 60rpx;
+  margin: 0 30rpx;
+}
+
+.navs {
+  padding: 15rpx 10rpx;
+}
+
+.active {
+  border-bottom: 5rpx solid #0091a5;
+}
+
+/* 主页 */
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120rpx;
+  background-color: #f1bb3f;
+}
+
+.banner image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.b_text {
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  color: white;
+}
+
+.p_top {
+  display: flex;
+}
+
+.image image {
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 80rpx;
+  margin: 50rpx 40rpx;
+}
+
+.p_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  margin-bottom: 10rpx;
+}
+
+.vip {
+  height: 40rpx;
+  width: 130rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.across {
+  display: flex;
+  padding: 17rpx 30rpx;
+  margin: 0 20rpx;
+  border-bottom: 1px solid #cccc;
+}
+
+.across text {
+  color: #ccc;
+}
+
+.across view {
+  position: absolute;
+  left: 40%;
+}
+
+/*  */
+
+.swiper-item image {
+  height: 350rpx;
+}
+
+.categories_name {
+  color: black;
+  font-size: 18px;
+  text-indent: 0.8em;
+}
+
+.categories_body {
+  color: #6d6060;
+  font-size: 12px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  align-content: center;
+  text-indent: 0.8em;
+}

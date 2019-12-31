@@ -1,0 +1,44 @@
+<!--pages/charpters/charpters.wxml-->
+<import src="/towxml/entry.wxml" />
+
+<!-- 侧边栏 -->
+<view class="sidebar">
+  <view>
+    <view class="s_title">
+      <text>{{course.name}}</text>
+      <image src="/image/back.png" bindtap="showSilde"></image>
+    </view>
+    <view class="s_content" wx:for="{{chapters}}" wx:key="index" data-id="{{item.id}}" bindtap="news">
+      <view class="s_list" >
+        <image src="/image/play.png"></image>
+        <text>{{item.title}}</text>
+        <view class="time">{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="{{showSilde?'cover' : ''}}" bindtap="showSilde"></view>
+<!-- 主页内容 -->
+<view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{showSilde?'c-state' : ''}} ">
+  <view class="header" data-id="{{item.id}}" style="position:fixed;top:0;width:100%;background:#fff;">
+    <view class="title">
+      <text>{{chapter.title}}</text>
+    </view>
+    <video src="{{chapter.video}}"></video>
+    <view class="list" bindtap="showSilde">
+      <image src="/image/2.png"></image>
+      <text>课程列表</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <!-- <view>{{chapter.body}}</view> -->
+    <scroll-view scroll-y="true" style="height:420rpx">
+    <template is="entry" data="{{...article}}" />
+    </scroll-view>
+  </view>
+
+
+
+
+</view>

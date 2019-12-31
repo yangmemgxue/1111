@@ -1,0 +1,19 @@
+/* pages/users/users.wxss */
+
+.log_in {
+  background-color: #0091a5;
+  color: white;
+  font-weight: normal;
+  margin-bottom: 40rpx
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60%;
+}
+.text{
+  font-size: 30rpx
+}
+

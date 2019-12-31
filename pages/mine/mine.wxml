@@ -1,0 +1,76 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <view class="mine">
+    <!-- nav -->
+    <view class="nav">
+      <text wx:for="{{navData}}" wx:key="index" data-index="{{index}}" bindtap="changenav" class=" navs {{index==currentIndex?'active':''}}">{{item}}</text>
+    </view>
+    <!-- 主页 -->
+    <view wx:if="{{currentIndex==0}}">
+      <view class="banner">
+        <image src="/image/reword.png"></image>
+        <view class="b_text">
+          <text>所有在线课程 可以免费观看！</text>
+          <text>线下班报名，每班6-10人，老学员推荐！</text>
+        </view>
+      </view>
+      <view class="user">
+        <view class="person">
+          <view class="p_top">
+            <view class="image">
+              <image src="{{user.photo}}"></image>
+            </view>
+            <view class="p_text">
+              <text class="name">{{user.fullname}}</text>
+              <view>学籍编号：{{user.id}}</view>
+              <text class="vip">免费会员</text>
+            </view>
+          </view>
+          <view class="across">
+            <text>电子邮箱</text>
+            <view>{{user.email}}</view>
+          </view>
+          <view class="across">
+            <text>性别</text>
+            <view wx:if="{{user.sex==1}}">男性</view>
+            <view wx:if="{{user.sex==2}}">女性</view>
+            <view wx:if="{{user.sex==3}}">其他</view>
+          </view>
+          <view class="across">
+            <text>公司</text>
+            <view wx:if="{{user.company==null}}">暂无</view>
+          </view>
+          <view class="across">
+            <text>自我介绍</text>
+            <view wx:if="{{user.company==null}}">暂无</view>
+          </view>
+          <view class="across" bindtap="toUser">点击退出</view>
+        </view>
+      </view>
+    </view>
+    <!-- 喜欢的课程 -->
+    <view wx:if="{{currentIndex==1}}" bindtap="get_course_like">
+      <view class="page-section page-section-spacing swiper">
+            <view class="swiper-item" wx:for="{{courses}}" wx:for-item="item_b" style="height: 700rpx" wx:key="item_b">
+              <image src="{{item_b.photo}}" style="width:100%;" data-id="{{item_b.id}}" bindtap="toCourse"></image>
+              <view class="categories_name">{{item_b.name}}</view>
+              <view class="categories_body">{{item_b.body}}</view>
+            </view>
+      </view>
+    </view>
+    <!--观看历史  -->
+    <view wx:if="{{currentIndex==2}}" bindtap="get_learnings">
+      <view class="page-section page-section-spacing swiper">
+        <view class="swiper-item" wx:for="{{courses}}" wx:for-item="item_b" style="height: 700rpx" wx:key="item_b">
+          <image src="{{item_b.photo}}" style="width:100%;" data-id="{{item_b.id}}" bindtap="toCourse"></image>
+          <view class="categories_name">{{item_b.name}}</view>
+        </view>
+      </view>
+    </view>
+
+
+
+
+
+  </view>
+</view>
